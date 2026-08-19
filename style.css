@@ -1,0 +1,413 @@
+/* CONFIGURACIÓN GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f7ff;
+    color: #29263d;
+}
+
+
+/* MENÚ PRINCIPAL */
+
+header {
+    width: 100%;
+    padding: 20px 8%;
+
+    background-color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.10);
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #7957d5;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #29263d;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #7957d5;
+}
+
+
+/* PORTADA */
+
+#portada {
+    min-height: 600px;
+
+    padding: 70px 10%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: linear-gradient(
+        135deg,
+        #eee9ff,
+        #ffffff
+    );
+}
+
+.contenido-portada {
+    width: 60%;
+}
+
+.subtitulo {
+    color: #7957d5;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+#portada h1 {
+    font-size: 55px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+#portada h1 span {
+    color: #7957d5;
+    display: block;
+}
+
+.descripcion-portada {
+    font-size: 19px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+
+/* BOTÓN */
+
+.boton {
+    display: inline-block;
+
+    background-color: #7957d5;
+    color: white;
+
+    text-decoration: none;
+
+    padding: 15px 28px;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.boton:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 8px 20px rgba(121, 87, 213, 0.3);
+}
+
+
+/* IMAGEN DE PORTADA */
+
+.imagen-portada {
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    background-color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 130px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+
+/* SECCIONES */
+
+section:not(#portada) {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+
+/* PIE DE PÁGINA */
+
+footer {
+    padding: 35px;
+    text-align: center;
+    background-color: #29263d;
+    color: white;
+}
+
+footer p {
+    margin: 8px;
+}
+<section id="explorar">
+
+    <h2>Explora los instrumentos</h2>
+
+    <p class="texto-seccion">
+        Conoce algunos de los instrumentos más representativos
+        de diferentes familias musicales.
+    </p>
+
+
+    <div class="contenedor-instrumentos">
+
+
+        <!-- GUITARRA -->
+
+        <div class="tarjeta">
+
+            <div class="icono-instrumento">
+                🎸
+            </div>
+
+            <h3>Guitarra</h3>
+
+            <p>
+                Instrumento de cuerda utilizado en diferentes
+                estilos musicales.
+            </p>
+
+            <button>
+                Ver más
+            </button>
+
+        </div>
+
+
+        <!-- VIOLÍN -->
+
+        <div class="tarjeta">
+
+            <div class="icono-instrumento">
+                🎻
+            </div>
+
+            <h3>Violín</h3>
+
+            <p>
+                Instrumento de cuerda conocido por su
+                sonido expresivo.
+            </p>
+
+            <button>
+                Ver más
+            </button>
+
+        </div>
+
+
+        <!-- PIANO -->
+
+        <div class="tarjeta">
+
+            <div class="icono-instrumento">
+                🎹
+            </div>
+
+            <h3>Piano</h3>
+
+            <p>
+                Instrumento de teclado utilizado en
+                numerosos géneros musicales.
+            </p>
+
+            <button>
+                Ver más
+            </button>
+
+        </div>
+
+
+        <!-- SAXOFÓN -->
+
+        <div class="tarjeta">
+
+            <div class="icono-instrumento">
+                🎷
+            </div>
+
+            <h3>Saxofón</h3>
+
+            <p>
+                Instrumento de viento utilizado especialmente
+                en jazz y otros estilos.
+            </p>
+
+            <button>
+                Ver más
+            </button>
+
+        </div>
+
+
+    </div>
+
+</section>
+/* =========================
+   SECCIÓN EXPLORAR
+   ========================= */
+
+#explorar {
+    background-color: #f8f7ff;
+}
+
+.texto-seccion {
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+
+
+/* CONTENEDOR DE TARJETAS */
+
+.contenedor-instrumentos {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+
+/* TARJETA */
+
+.tarjeta {
+    background-color: white;
+
+    padding: 30px 20px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+
+    text-align: center;
+}
+
+
+/* EFECTO AL PASAR EL MOUSE */
+
+.tarjeta:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 15px 30px rgba(121, 87, 213, 0.20);
+}
+
+
+/* ICONO */
+
+.icono-instrumento {
+    font-size: 70px;
+
+    width: 120px;
+    height: 120px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    background-color: #eee9ff;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+/* NOMBRE */
+
+.tarjeta h3 {
+    font-size: 25px;
+
+    color: #7957d5;
+
+    margin-bottom: 15px;
+}
+
+
+/* DESCRIPCIÓN */
+
+.tarjeta p {
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+}
+
+
+/* BOTÓN DE TARJETA */
+
+.tarjeta button {
+    border: none;
+
+    background-color: #7957d5;
+
+    color: white;
+
+    padding: 10px 20px;
+
+    border-radius: 20px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.tarjeta button:hover {
+    background-color: #6041b8;
+
+    transform: scale(1.05);
+}
